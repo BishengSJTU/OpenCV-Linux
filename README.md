@@ -24,7 +24,7 @@ PCL 源码编译安装：
 
 编译后安装到之前指定的文件夹（即“/home/ziqi/pcl-1.8”）
 
-    sudo make -j6 install
+    sudo make install
 
 因为我们把pcl-1.8安装到了 “/home/ziqi/pcl-1.8”，所以任何程序调用pcl-1.8库，都要在CMakeLists.txt里设置PCLConfig.cmake这个文件所在目录，之后才能在CMakeLists.txt里面使用find_package()，其中，PCL_DIR的值是PCLConfig.cmake这个文件所在的目录。
 
@@ -58,7 +58,7 @@ cuda pcl混合编程的一个例子可以使用我测试使用的代码：<a hre
 
 安装：
 
-    sudo make -j6 install
+    sudo make install
 
 如果没有安装在默认/usr/local，比如安装在/usr/local/opencv320，则任何程序调用opencv库，都要在CMakeLists.txt里设置OpenCVConfig.cmake这个文件所在目录，之后才能在CMakeLists.txt里面使用
 
