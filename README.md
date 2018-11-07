@@ -63,7 +63,6 @@ cuda pcl混合编程的一个例子可以使用我测试使用的代码：<a hre
 
 如果没有安装在默认/usr/local，比如安装在/usr/local/opencv320，则任何程序调用opencv库，都要在CMakeLists.txt里设置OpenCVConfig.cmake这个文件所在目录，之后才能在CMakeLists.txt里面使用
 
-    find_package()
     set(OpenCV_DIR  "/usr/local/opencv320/share/OpenCV/")
     find_package(OpenCV)
     include_directiories(${OpenCV_INCLUDE_DIRS})
