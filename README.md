@@ -33,7 +33,7 @@ PCL 源码编译安装：
     find_package(PCL 1.8 REQUIRED COMPONENTS)
     include_directiories(${PCL_INCLUDE_DIRS})
     link_directories(${PCL_LIBRARY_DIRS})
-    add_definations(${PCL_DEFINATIONS})
+    add_definitions(${PCL_DEFINATIONS})
 
 因为我们把pcl-1.8安装到了一个新的位置，没有覆盖安装系统原来的pcl-1.7，因此是可以共存的。使用源码编译安装的pcl-1.8的时候，只需要如上修改PCL_DIR即可。
 cuda pcl混合编程的一个例子可以使用我测试使用的代码：<a href="https://github.com/ChaiZQ/pcl-with-cuda.git" rel="nofollow" target="_blank">测试代码</a>。</p>
@@ -52,6 +52,9 @@ cuda pcl混合编程的一个例子可以使用我测试使用的代码：<a hre
 
     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
 
+如果选择安装opencv_contrib模块
+　　
+  　cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler -D OPENCV_EXTRA_MODULES_PATH=(opencv_contrib路径)/opencv_contrib-3.3.1/modules/ ..
 
 根据cpu核心数目不同，选择编译使用的-j选项，如使用6个核心编译：
 
@@ -67,5 +70,5 @@ cuda pcl混合编程的一个例子可以使用我测试使用的代码：<a hre
     find_package(OpenCV)
     include_directiories(${OpenCV_INCLUDE_DIRS})
     link_directories(${OpenCV_LIBRARY_DIRS})
-    add_definations(${OpenCV_DEFINATIONS})
+    add_definitions(${OpenCV_DEFINATIONS})
 
