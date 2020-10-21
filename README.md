@@ -54,7 +54,10 @@ cuda pcl混合编程的一个例子可以使用我测试使用的代码：<a hre
     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler -D OPENCV_EXTRA_MODULES_PATH=(opencv_contrib路径)/opencv_contrib-3.3.1/modules/ ..
 
 如果选择安装opencv_contrib模块则选择下面一种编译方式
-编译错误解决方法：if you meet the fatal error: boostdesc_bgm.i: No such file or directory or fatal error: vgg.i: No such file or directory click here: https://github.com/opencv/opencv_3rdparty/branches/stale enter the "contrib_xfeatures2d_vgg_20160317" and "contrib_xfeatures2d_boostdesc_20161012" and then download the all ".i" . put the all ".i" in 'opencv_contrib/modules/xfeatures2d/src/' than, make
+编译错误解决方法：
+法１．if you meet the fatal error: boostdesc_bgm.i: No such file or directory or fatal error: vgg.i: No such file or directory click here: https://github.com/opencv/opencv_3rdparty/branches/stale enter the "contrib_xfeatures2d_vgg_20160317" and "contrib_xfeatures2d_boostdesc_20161012" and then download the all ".i" . put the all ".i" in 'opencv_contrib/modules/xfeatures2d/src/' than, make
+
+法2.-D BUILD_opencv_xfeatures2d=OFF
 
 根据cpu核心数目不同，选择编译使用的-j选项，如使用6个核心编译：
 
