@@ -13,11 +13,11 @@ PCL 源码编译安装：
 
 一般编译（然而我们不这么编译，看下一条）：
 
-    cmake -DCMAKE_BUILD_TYPE=Release ..
+    cmake -D　CMAKE_BUILD_TYPE=Release ..
 
 指定gpu功能的编译，并指定安装文件位置为“/home/ziqi/pcl-1.8”：
 
-    cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/ziqi/pcl-1.8 -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON ..
+    cmake -D　CMAKE_BUILD_TYPE=Release -D　CMAKE_INSTALL_PREFIX=/home/ziqi/pcl-1.8 -D　BUILD_GPU=ON -D　BUILD_apps=ON -D　BUILD_examples=ON ..
 
 根据cpu核心数目不同，选择编译使用的-j选项，如使用6个核心编译：
 
