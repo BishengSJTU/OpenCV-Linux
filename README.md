@@ -57,6 +57,8 @@ cuda pcl混合编程的一个例子可以使用我测试使用的代码：<a hre
 编译错误解决方法：
 法１．if you meet the fatal error: boostdesc_bgm.i: No such file or directory or fatal error: vgg.i: No such file or directory click here: https://github.com/opencv/opencv_3rdparty/branches/stale enter the "contrib_xfeatures2d_vgg_20160317" and "contrib_xfeatures2d_boostdesc_20161012" and then download the all ".i" . put the all ".i" in 'opencv_contrib/modules/xfeatures2d/src/' than, make
 
+added this path "/home/cw/mytool/opencv-3.4.6/opencv_contrib-3.4.6/modules/xfeatures2d/include/opencv2/xfeatures2d/cuda.hpp" replacing 52 line that is "opencv2/xfeatures2d/cuda.hpp" in file which path is "opencv-3.4.0/modules/stitching/include/opencv2/stitching/detail/matchers.hpp"
+
 法2.-D BUILD_opencv_xfeatures2d=OFF
 
 根据cpu核心数目不同，选择编译使用的-j选项，如使用6个核心编译：
