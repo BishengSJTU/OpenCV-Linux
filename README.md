@@ -51,10 +51,9 @@ cuda pcl混合编程的一个例子可以使用我测试使用的代码：<a hre
 编译两个包，指明安装位置，默认为/usr/local
 
     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
+    cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler -D OPENCV_EXTRA_MODULES_PATH=(opencv_contrib路径)/opencv_contrib-3.3.1/modules/ ..
 
-如果选择安装opencv_contrib模块
-　　
-  　cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler -D OPENCV_EXTRA_MODULES_PATH=(opencv_contrib路径)/opencv_contrib-3.3.1/modules/ ..
+如果选择安装opencv_contrib模块则选择下面一种编译方式
 
 根据cpu核心数目不同，选择编译使用的-j选项，如使用6个核心编译：
 
